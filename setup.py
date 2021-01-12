@@ -3,14 +3,14 @@
 from setuptools import setup
 
 setup(
-    name='reclada.csv_parser',
+    name='reclada.parser.csv',
     description='CSV parsing step for Reclada Parser',
     version='0.1',
-    packages=['reclada.csv_parser'],
+    packages=['reclada.parser', 'reclada.parser.csv'],
     install_requires=[
     ],
     entry_points={
-        'console_scripts': ['reclada-csv-parser=reclada.csv_parser.main:main'],
+        'console_scripts': ['reclada-csv-parser=reclada.parser.csv.main:main'],
     },
     python_requires='>=3.6',
 )
