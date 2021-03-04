@@ -6,7 +6,8 @@ ENV FILENAME=""
 
 COPY . .
 
-RUN pip install .
+RUN pip install git+https://github.com/reclada/connector.git &&\
+    pip install .
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD [ "python", "job" ]
