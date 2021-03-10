@@ -5,6 +5,7 @@ WORKDIR /app
 ENV FILENAME=""
 
 COPY . .
+RUN ln -s "$PWD/reclada-run.sh" /usr/bin/reclada-run.sh
 
 RUN pip install git+https://github.com/reclada/connector.git &&\
     pip install .
